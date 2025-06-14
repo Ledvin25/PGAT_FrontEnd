@@ -1,0 +1,524 @@
+/* User Management Styles */
+.user-management-app * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.user-management-app {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  background-color: #f5f7fa;
+  min-height: 100vh;
+}
+
+/* User Management Content Styles */
+.user-management-content {
+  width: 100%;
+}
+
+/* Remove all header styles - they're now in AdminDashboard */
+
+/* Main Content */
+.user-management-main {
+  padding: 30px 20px;
+}
+
+.user-management-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.user-management-title {
+  color: #333;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+/* Controls */
+.user-management-controls {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.user-management-filters {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.user-management-filter-group,
+.user-management-search-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.user-management-filter-group label,
+.user-management-search-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.user-management-select,
+.user-management-search-input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  min-width: 200px;
+}
+
+.user-management-select:focus,
+.user-management-search-input:focus {
+  outline: none;
+  border-color: #1e5a96;
+  box-shadow: 0 0 0 2px rgba(30, 90, 150, 0.1);
+}
+
+.user-management-create-btn {
+  background: #1e5a96;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.user-management-create-btn:hover {
+  background: #164a7a;
+}
+
+/* Table */
+.user-management-table-container {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.user-management-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.user-management-table th {
+  background: #f8f9fa;
+  color: #333;
+  font-weight: 600;
+  padding: 15px 12px;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+  font-size: 14px;
+}
+
+.user-management-table td {
+  padding: 15px 12px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 14px;
+  color: #333;
+}
+
+.user-management-table tbody tr:hover {
+  background: #f8f9fa;
+}
+
+.user-management-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.user-management-no-data {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  padding: 40px !important;
+}
+
+/* Badges */
+.user-management-role-badge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.role-escuela {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.role-profesor {
+  background: #e8f5e8;
+  color: #2e7d32;
+}
+
+.role-estudiante {
+  background: #e8f5e8;
+  color: #2e7d32;
+}
+
+.role-administrador {
+  background: #fce4ec;
+  color: #c2185b;
+}
+
+.role-default {
+  background: #e2e3e5;
+  color: #383d41;
+}
+
+.user-management-status-badge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.status-active {
+  background: #e8f5e8;
+  color: #2e7d32;
+}
+
+.status-inactive {
+  background: #ffebee;
+  color: #d32f2f;
+}
+
+/* Actions */
+.user-management-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.user-management-action-btn {
+  background: none;
+  border: 1px solid #ddd;
+  padding: 6px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.user-management-action-btn:hover {
+  background: #f8f9fa;
+  border-color: #adb5bd;
+}
+
+.user-management-action-btn.edit:hover {
+  background: #e3f2fd;
+  border-color: #1976d2;
+}
+
+.user-management-action-btn.toggle:hover {
+  background: #fff3e0;
+  border-color: #f57c00;
+}
+
+.user-management-action-btn.delete:hover {
+  background: #ffebee;
+  border-color: #d32f2f;
+}
+
+/* Loading */
+.user-management-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  color: #666;
+}
+
+.user-management-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #1e5a96;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Summary */
+.user-management-summary {
+  background: white;
+  border-radius: 8px;
+  padding: 15px 20px;
+  margin-top: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-management-summary p {
+  color: #666;
+  font-size: 14px;
+}
+
+/* Modal Styles */
+.user-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.user-modal {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.user-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px;
+  border-bottom: 1px solid #eee;
+}
+
+.user-modal-header h2 {
+  color: #333;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.user-modal-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #666;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.user-modal-close:hover {
+  background: #f0f0f0;
+}
+
+.user-modal-form {
+  padding: 25px;
+}
+
+.user-modal-form-group {
+  margin-bottom: 20px;
+}
+
+.user-modal-form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.user-modal-form-group input,
+.user-modal-form-group select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.user-modal-form-group input:focus,
+.user-modal-form-group select:focus {
+  outline: none;
+  border-color: #1e5a96;
+  box-shadow: 0 0 0 2px rgba(30, 90, 150, 0.1);
+}
+
+.user-modal-form-group input.error {
+  border-color: #d32f2f;
+}
+
+.user-modal-error {
+  color: #d32f2f;
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+}
+
+.user-modal-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.user-modal-cancel {
+  background: #f8f9fa;
+  color: #333;
+  border: 1px solid #ddd;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.user-modal-cancel:hover {
+  background: #e9ecef;
+}
+
+.user-modal-save {
+  background: #1e5a96;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.user-modal-save:hover {
+  background: #164a7a;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .user-management-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .user-management-filters {
+    justify-content: space-between;
+  }
+
+  .user-management-create-btn {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 768px) {
+  .user-management-header-content {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 15px;
+    gap: 10px;
+  }
+
+  .user-management-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .user-management-nav-item {
+    padding: 10px 15px;
+    font-size: 13px;
+  }
+
+  .user-management-main {
+    padding: 20px 15px;
+  }
+
+  .user-management-controls {
+    padding: 15px;
+  }
+
+  .user-management-filters {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .user-management-select,
+  .user-management-search-input {
+    min-width: auto;
+    width: 100%;
+  }
+
+  .user-management-table-container {
+    overflow-x: auto;
+  }
+
+  .user-management-table {
+    min-width: 800px;
+  }
+
+  .user-modal {
+    width: 95%;
+    margin: 20px;
+  }
+
+  .user-modal-form {
+    padding: 20px;
+  }
+
+  .user-modal-actions {
+    flex-direction: column;
+  }
+
+  .user-modal-cancel,
+  .user-modal-save {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .user-management-title {
+    font-size: 24px;
+  }
+
+  .user-management-table th,
+  .user-management-table td {
+    padding: 10px 8px;
+    font-size: 13px;
+  }
+
+  .user-management-actions {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .user-management-action-btn {
+    width: 100%;
+    padding: 8px;
+  }
+}

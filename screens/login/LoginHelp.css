@@ -1,0 +1,179 @@
+.login-help {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.login-help-toggle {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  color: #495057;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-help-toggle:hover {
+  background: #e9ecef;
+  border-color: #adb5bd;
+}
+
+.login-help-panel {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 15px;
+  text-align: left;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login-help-panel h3 {
+  color: #495057;
+  font-size: 16px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.login-help-intro {
+  color: #6c757d;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.login-help-users {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.login-help-user {
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  padding: 12px;
+}
+
+.login-help-user-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.login-help-credentials {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  color: #495057;
+}
+
+.login-help-copy {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 2px 4px;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.login-help-copy:hover {
+  background: #e9ecef;
+}
+
+.login-help-role {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 8px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.role-administrador {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.role-profesor {
+  background: #e8f5e8;
+  color: #2e7d32;
+}
+
+.role-estudiante {
+  background: #fff3e0;
+  color: #f57c00;
+}
+
+.role-escuela-departamento {
+  background: #fce4ec;
+  color: #c2185b;
+}
+
+.login-help-user-info {
+  padding-left: 8px;
+}
+
+.login-help-name {
+  font-weight: 500;
+  color: #495057;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.login-help-description {
+  color: #6c757d;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.login-help-instructions {
+  background: #e7f3ff;
+  border: 1px solid #b3d9ff;
+  border-radius: 6px;
+  padding: 15px;
+}
+
+.login-help-instructions h4 {
+  color: #0056b3;
+  font-size: 14px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.login-help-instructions ol {
+  color: #495057;
+  font-size: 13px;
+  line-height: 1.5;
+  margin-left: 20px;
+}
+
+.login-help-instructions li {
+  margin-bottom: 4px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .login-help-panel {
+    padding: 15px;
+  }
+
+  .login-help-user-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .login-help-credentials {
+    font-size: 13px;
+  }
+}
